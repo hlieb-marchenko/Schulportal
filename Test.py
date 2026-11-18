@@ -779,6 +779,10 @@ class SPH:
 
         return {
             "url": str(page.url),
+            "title": (
+                title.get_text(strip=True)
+                if title else None
+            ),
             "text": text,
             "links": links,
             "forms": forms,
